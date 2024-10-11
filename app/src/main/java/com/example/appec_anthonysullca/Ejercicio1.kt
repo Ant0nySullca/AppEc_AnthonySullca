@@ -32,7 +32,7 @@ class Ejercicio1 : AppCompatActivity(), View.OnClickListener {
                 binding.textViewResult.text = "ingrese un número válido"
             } else {
                 val salario = calcularSalario(horasTrabajadas)
-                binding.textViewResult.text = "Su salario es $${salario}"
+                binding.textViewResult.text = "Su salario es S./${salario}"
             }
         }
 
