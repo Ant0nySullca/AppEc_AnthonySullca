@@ -23,7 +23,7 @@ class ejercicio4 : AppCompatActivity(), View.OnClickListener {
         val numeroLimite = binding.etNumeroLimite.text.toString().toIntOrNull()
 
         if (numeroLimite == null || numeroLimite < 1) {
-            binding.tvResultadoSuma.text = "Por favor, ingrese un número válido mayor o igual a 1"
+            binding.tvResultadoSuma.text = "ingrese un número válido mayor o igual a 1"
         } else {
             val suma = calcularSumaSerie(numeroLimite)
             binding.tvResultadoSuma.text = "La suma de los números hasta $numeroLimite es $suma"

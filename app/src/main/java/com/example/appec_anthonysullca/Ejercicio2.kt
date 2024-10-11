@@ -26,7 +26,7 @@ class Ejercicio2 : AppCompatActivity(), View.OnClickListener {
         val nota4 = binding.etNota4.text.toString().toDoubleOrNull()
 
         if (nota1 == null || nota2 == null || nota3 == null || nota4 == null) {
-            binding.tvResultadoPromedio.text = "Por favor, ingrese todas las notas válidas."
+            binding.tvResultadoPromedio.text = "ingrese todas las notas válidas."
         } else {
             val resultado = calcularPromedio(listOf(nota1, nota2, nota3, nota4))
             binding.tvResultadoPromedio.text = "Nota eliminada: ${resultado.first}\nPromedio: ${resultado.second}"
@@ -34,9 +34,9 @@ class Ejercicio2 : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun calcularPromedio(notas: List<Double>): Pair<Double, Double> {
-        val notasOrdenadas = notas.sorted()
-        val notaEliminada = notasOrdenadas[0]
-        val promedio = notasOrdenadas.drop(1).average()
+        val notOrdenadas = notas.sorted()
+        val notaEliminada = notOrdenadas[0]
+        val promedio = notOrdenadas.drop(1).average()
         return Pair(notaEliminada, promedio)
     }
 }

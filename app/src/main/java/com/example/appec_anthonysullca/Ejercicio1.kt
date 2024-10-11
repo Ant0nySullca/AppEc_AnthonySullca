@@ -29,7 +29,7 @@ class Ejercicio1 : AppCompatActivity(), View.OnClickListener {
             val horasTrabajadas = binding.etHoras.text.toString().toIntOrNull()
 
             if (horasTrabajadas == null) {
-                binding.textViewResult.text = "Por favor, ingrese un número válido"
+                binding.textViewResult.text = "ingrese un número válido"
             } else {
                 val salario = calcularSalario(horasTrabajadas)
                 binding.textViewResult.text = "Su salario es $${salario}"
